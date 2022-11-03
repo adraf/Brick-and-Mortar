@@ -11,6 +11,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600&display=swap" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
 </head>
 <body>
   <!-- Standard w/buttons across all pages - change color and remove bground img -->
@@ -43,200 +47,51 @@
       <!-- info and text -->
       <div id="galleryPageInfo">
         <h1>Gallery</h1>
-        <div id="gallerySection">
-          <img src="./images/gallery_placeholder.png" alt="">
-          <img src="./images/gallery_placeholder.png" alt="">
-          <img src="./images/gallery_placeholder.png" alt="">
-          <img src="./images/gallery_placeholder.png" alt="">
-          <img src="./images/gallery_placeholder.png" alt="">
-          <img src="./images/gallery_placeholder.png" alt="">
-          <img src="./images/gallery_placeholder.png" alt="">
-          <img src="./images/gallery_placeholder.png" alt="">
-          <img src="./images/gallery_placeholder.png" alt="">
-          <img src="./images/gallery_placeholder.png" alt="">
+        <div class="gallerySection">
+          <img src="./images/gallery_placeholder.png" onclick="openModal();currentSlide(1)">
+          <img src="./images/Benny_Martin.jpg" onclick="openModal();currentSlide(2)">
+          <img src="./images/gallery_placeholder.png" onclick="openModal();currentSlide(3)">
+          <img src="./images/Fabian_Brabon.jpg" onclick="openModal();currentSlide(4)">
+          <img src="./images/gallery_placeholder.png" onclick="openModal();currentSlide(5)">
+          <img src="./images/Benny_Martin.jpg" onclick="openModal();currentSlide(6)">
+          <img src="./images/gallery_placeholder.png" onclick="openModal();currentSlide(7)">
+          <img src="./images/Fabian_Brabon.jpg" onclick="openModal();currentSlide(8)">
         </div>
       </div>
     </div>
-    
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()"><img src="./images/menu_cross.png" alt=""></span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <img src="./images/gallery_placeholder.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="./images/Benny_Martin.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="./images/gallery_placeholder.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="./images/Fabian_Brabon.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="./images/gallery_placeholder.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="./images/Benny_Martin.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="./images/gallery_placeholder.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="./images/Fabian_Brabon.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>    
   </main>
   <script src="main.js"></script>
+  <script src="modal.js"></script>
 </body>
 </html>
-
-
-<!-- 
-
-
-.gallerySection {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.mySlides {
-  display: none;
-}
-
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with opacity */
-.prev:hover,
-.next:hover {
-  background-color: rgb(62, 62, 62, 0.8);
-}
-
-
-img {
-  margin-bottom: -4px;
-}
-
-
-
-</style>
-<body>
-
-
-<div class="row">
-  <div class="gallerySection">
-    <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-  </div>
-  <div class="gallerySection">
-    <img src="img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-  </div>
-  <div class="gallerySection">
-    <img src="img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-  </div>
-  <div class="gallerySection">
-    <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-  </div>
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
- 
-      <img src="img_nature_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <img src="img_snow_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <img src="img_mountains_wide.jpg" style="width:100%">
-    </div>
-    
-    <div class="mySlides">
-      <img src="img_lights_wide.jpg" style="width:100%">
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  </div>
-</div>
-
-<script>
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-
-  slides[slideIndex-1].style.display = "block";
- 
-}
-</script>
-     -->

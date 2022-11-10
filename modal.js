@@ -1,6 +1,6 @@
 function openModal() {
   document.getElementById("myModal").style.display = "flex";
-  const pageSection = document.querySelector(".pageSection");
+  
   pageSection.classList.toggle("blurPage");
   const bookingButtonContainer = document.querySelector(".bookingButton")
   bookingButtonContainer.classList.toggle("hideElement")

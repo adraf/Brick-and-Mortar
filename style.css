@@ -187,7 +187,7 @@ body {
 
 
 /* contact page */
-#contactPageBody {
+#contactPageBody, #pricePageBody {
   background-color: white;
   width: 100vw;
   padding-bottom: 50px;
@@ -208,7 +208,7 @@ body {
   min-height: 100vh;
 }
 
-#contactPageInfo, #teamPageInfo, #galleryPageInfo {
+#contactPageInfo, #teamPageInfo, #galleryPageInfo, #priceInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -225,6 +225,11 @@ body {
 .gallerySection img {
   width: 200px;
   margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.gallerySection img:hover {
+  filter: opacity(80%);
 }
 
 #contactPageInfo a {
@@ -232,11 +237,14 @@ body {
   color: black;
   padding: 12px 0;
   margin: 12px 0;
+  letter-spacing: 3px;
 }
 
 #contactPageInfo p {
-  margin: 12px;
+  margin: 0;
+  margin-top: 5px;
   line-height: 2;
+  letter-spacing: 3px;
 }
 
 .barberSections p {
@@ -248,10 +256,39 @@ body {
   max-width: 600px;
 }
 
+#priceInfo .info {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 5px;
+  max-width: 600px;
+}
+
+#priceInfo .prices {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  max-width: 600px;
+}
+
 .barberSections img {
   height: 200px;
   border-radius: 100%;
   margin: 12px;
+}
+
+.barberSections a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: inherit;
+}
+
+a:hover {
+  filter: opacity(60%);
 }
 
 

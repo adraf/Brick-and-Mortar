@@ -27,4 +27,12 @@ menuLinks.forEach(
   }
 )
 
+// js confirm box for customer's emailing.
+function emailCheck() {
+  if (confirm("If you would like to email us with any questions, please continue by clicking OK.\nIf you are looking to request a booking please select Cancel and use the Resurva boking form.\nThanks")) {
+    window.open('mailto:brickandmortarexeter@gmail.com?subject=Website%20Enquiry', '_blank');
+  } else {
+    window.open('https://brickmortar.resurva.com/book', '_blank');
+  }
 
+}

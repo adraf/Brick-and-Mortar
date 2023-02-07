@@ -185,13 +185,11 @@ body {
   filter: opacity(60%);
 }
 
-
 /* contact page */
 #contactPageBody, #pricePageBody {
   background-color: white;
   width: 100vw;
   padding-bottom: 50px;
-  /* height: 100vh; */
 }
 
 #teamPageBody, #galleryPageBody {
@@ -202,7 +200,6 @@ body {
 .pageSection {
   display: flex;
   flex-direction: column;
-  /* padding-top: 80px; */
   align-items: center;
   text-align: center;
   min-height: 100vh;
@@ -220,12 +217,18 @@ body {
 .gallerySection {
   max-width: 900px;
   margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 } 
 
 .gallerySection img {
-  width: 200px;
-  margin-bottom: 8px;
   cursor: pointer;
+  margin: 0 4px 12px 4px;
+  align-self: center;
+  max-width: 200px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .gallerySection img:hover {
@@ -308,11 +311,17 @@ a:hover {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  /* background-color: #fefefe; */
   margin: auto;
   padding: 0;
   width: 90%;
   max-width: 650px;
+}
+
+.modal-content img {
+  max-height: 80%;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 /* The Close Button */
@@ -353,7 +362,7 @@ a:hover {
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: -10px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -369,15 +378,11 @@ img {
 
 
 
-
-
-
-
 @media only screen and (max-width: 500px) {
 
   .gallerySection img {
-    width: 125px;
-    margin-bottom: 8px;
+    max-width: 125px;
+    height: auto;
   }
 
 

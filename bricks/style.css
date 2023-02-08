@@ -1,0 +1,464 @@
+body {
+  background-color: rgb(62, 62, 62);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 10px;
+  font-size: 1rem;
+
+}
+
+/* Main/Landing Page */
+/* Background */
+#landingPageBody {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* background mimage w/opacity */
+#landingPageBody:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.4;
+  background-image: url(./images/studio_img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* landing page logo */
+.heroLogoContainer {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+  align-items: center;
+}
+
+.heroLogo {
+  position: relative;
+  height: 25vh;
+}
+
+/* small logo */
+#smallLogoContainer {
+  display: flex;
+  justify-content: center;
+  height: 12vh;
+  margin: 30px 0 10px 0;
+  width: auto;
+  align-items: center;
+}
+
+#smallLogo {
+  display: flex;
+  height: 100%;
+  padding: 5px 20px;
+  align-items: center;
+}
+
+#smallLogo img {
+  height: 80%;
+}
+
+
+/* landing page buttons */
+.bookingButton, .burgerMenuButton  {
+  position: absolute;
+  top: 60px;
+  z-index: 8;
+}
+
+.bookingButton {
+  right: 30px;
+}
+
+.burgerMenuButton {
+  left: 30px
+}
+
+.scheduleLogo {
+  height: 35px;
+  width: 35px;
+}
+
+
+/* mobile burger menu */
+.burger {
+  position: absolute;
+  z-index: 10;
+  top: 60px;
+  left: 30px;
+  height: 39px;
+  width: 35px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  /* show the menu image */
+  background-image: url(./images/menu_black.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* black menu icon on white background */
+#burgerWhite {
+  filter: invert(100);
+}
+/* set background of nav to dark */
+#menuDark {
+  background-color: rgb(62, 62, 62, 0.8);
+}
+
+.burger:focus, .showClose:focus {
+  outline-color: white;
+}
+
+.showClose {
+  background-image: url(./images/menu_cross.png);
+  /* filter: invert(); */
+  position: fixed;
+}
+
+.navbar {
+  /* position: absolute; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /* hide the menu right of the screen by default */
+  transform: translateX(-100%);
+  /* transition adds a little animation when sliding in and out of the menu */
+  transition: transform 0.30s ease-in-out;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+}
+
+.showNav {
+  /* show the menu */
+  transform: translateX(0);
+}
+
+/* Classes to hide/blur background for Burger Menu */
+.blurBackground:before {
+  filter: blur(10px);
+}
+
+.blurPage {
+  filter: blur(10px);
+}
+
+/* .contactPageHide */
+.hideElement {
+  display: none;
+}
+
+.navbar ul {
+  width: 100%;
+  height: 60%;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+}
+
+.navbar ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.navbar ul li a:hover, .navbar ul li a:focus {
+  filter: opacity(60%);
+}
+
+/* contact page */
+#contactPageBody, #pricePageBody {
+  background-color: white;
+  width: 100vw;
+  padding-bottom: 50px;
+}
+
+#teamPageBody, #galleryPageBody {
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+.pageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+#contactPageInfo, #teamPageInfo, #galleryPageInfo, #priceInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90vw;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.gallerySection {
+  max-width: 900px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+} 
+
+.gallerySection img {
+  cursor: pointer;
+  margin: 0 4px 12px 4px;
+  align-self: center;
+  max-width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.gallerySection img:hover {
+  filter: opacity(80%);
+}
+
+#contactPageInfo a {
+  text-decoration: none;
+  color: black;
+  padding: 12px 0;
+  margin: 12px 0;
+  letter-spacing: 3px;
+}
+
+#contactPageInfo p {
+  margin: 0;
+  margin-top: 5px;
+  line-height: 2;
+  letter-spacing: 3px;
+}
+
+.barberSections p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+#priceInfo .info {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 5px;
+  max-width: 600px;
+}
+
+#priceInfo .prices {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  max-width: 600px;
+}
+
+.barberSections img {
+  height: 200px;
+  border-radius: 100%;
+  margin: 12px;
+}
+
+.barberSections a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: inherit;
+}
+
+a:hover {
+  filter: opacity(60%);
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(62, 62, 62, 0.8);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  /* background-color: #fefefe; */
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 650px;
+}
+
+.modal-content img {
+  max-height: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.close img {
+  height: 39px;
+  width: 35px;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -10px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with opacity */
+.prev:hover,
+.next:hover {
+  background-color: rgb(62, 62, 62, 0.8);
+}
+
+img {
+  margin-bottom: -5px;
+}
+
+
+/* Confirm box */
+
+.overlay {
+  /* position: absolute; */
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.confirm-box {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  max-width: 500px;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.confirm-box h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.confirmClose {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 20px;
+  width: 20px;
+  background-image: url(./images/menu_cross.png);
+  background-position: center;
+  background-size: contain;
+  filter: invert();
+}
+
+.confirmClose:hover {
+  opacity: 60%;
+}
+
+.confirmBtn {
+  cursor: pointer;  
+  padding: 5px 15px;
+  margin: 5px;
+  font-family: inherit;
+  text-transform: uppercase;
+ }
+
+ b {
+  text-transform: uppercase;
+ }
+
+@media only screen and (max-width: 500px) {
+
+  .gallerySection img {
+    max-width: 125px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .confirm-box {
+    width: 80%;
+    height: auto;
+  }
+
+}

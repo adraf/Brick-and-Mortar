@@ -449,8 +449,8 @@ img {
  }
 
  input[type="button"] {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
+  appearance: none;
+  border-radius: 0;
  }
 
 

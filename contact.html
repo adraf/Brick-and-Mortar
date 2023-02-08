@@ -22,7 +22,7 @@
   <!-- Standard w/buttons across all pages - change color and remove bground img -->
   <!-- Reservation Button for all pages -->
   <div class="bookingButton">
-    <a href="https://brickmortar.resurva.com/availability">
+    <a href="https://brickmortar.resurva.com/book">
       <img class="scheduleLogo" id="scheduleLogoWhite" src="./images/schedule_black.png" alt="Brick & Mortar Booking Link Button">
     </a>
   </div>
@@ -30,7 +30,7 @@
   <div class="burger"></div>
   <nav class="navbar" id="menuDark">     
     <ul>
-      <li><a class="menuLink" href="https://brickmortar.resurva.com/availability">Book</a></li>
+      <li><a class="menuLink" href="https://brickmortar.resurva.com/book">Book</a></li>
       <li><a class="menuLink" href="gallery.html">Gallery</a></li>
       <li><a class="menuLink" href="team.html">Team</a></li>
       <li><a class="menuLink" href="price.html">Price List</a></li>
@@ -39,6 +39,21 @@
       <li><a class="menuLink" href="https://www.facebook.com/brickandmortarexeter/">Facebook</a></li>
     </ul>
   </nav>
+  <!-- confirm box for email -->
+  <div class="overlay" id="overlay" hidden>
+    <div class="confirm-box">
+      <div onclick="closeConfirmBox()" class="confirmClose"></div>
+      <img id="confirmLogo" src="./images/hero_logo_black.png" alt="brick and mortar logo">
+      <p>If you would like to email us with any questions, please continue to <b>Send Email</b>.</p>
+      <p>If you are looking to request a booking, please select <b>Make Booking</b> to use the Resurva booking form.</p>
+      <p>Thanks.</p>
+      <div>
+      <button class="confirmBtn" onclick="isConfirm(false)">Make Booking</button>
+      <button class="confirmBtn" onclick="isConfirm(true)">Send Email</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Main Logo and Hero Picture -->
   <main class="pageBody" id="contactPageBody">
     <div class="pageSection">
@@ -50,8 +65,12 @@
       <div id="contactPageInfo">
         <h1>Contact Us</h1>
         <a href="tel:07732344154"><p>Phone</p><p>07732344154</p></a>
+        <!-- general email link -->
         <!-- <a href="mailto:brickandmortarexeter@gmail.com?subject=Website%20Enquiry"><p>Email</p><p>brickandmortarexeter@gmail.com</p></a> -->
-        <a onclick="emailCheck()"><p>Email</p><p>brickandmortarexeter@gmail.com</p></a>
+        <!-- confirm box link -->
+        <!-- <a onclick="emailCheck()"><p>Email</p><p>brickandmortarexeter@gmail.com</p></a>     -->
+        <!-- personalised confirm box link -->
+        <a onclick="showConfirmBox()"><p>Email</p><p>brickandmortarexeter@gmail.com</p></a>
         <a href="https://g.page/brick-and-mortar-exeter?share"><p>Find Us</p>
         <p>First Floor<br>55 Bartholomew Street West<br>Exeter<br>EX4 3AJ</p></a>
         <a href="https://www.instagram.com/brickandmortar_exeter/?hl=en">Instagram</a>

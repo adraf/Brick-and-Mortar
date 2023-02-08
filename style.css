@@ -436,23 +436,28 @@ img {
   opacity: 60%;
 }
 
-.confirmBtn {
+ button {
   cursor: pointer;  
-  padding: 5px 15px;
   margin: 5px;
   font-family: inherit;
   text-transform: uppercase;
+  appearance: none;
+  border-radius: 2px;
+  padding: 8px 12px;
+  color: white;
+  background-color: black;
+  border: 1px black solid;
+ }
+
+button:hover {
+  color: black;
+  background-color: white;
+  border: 1px black solid;
  }
 
  b {
   text-transform: uppercase;
  }
-
- input[type="button"] {
-  appearance: none;
-  border-radius: 0;
- }
-
 
 @media only screen and (max-width: 500px) {
 

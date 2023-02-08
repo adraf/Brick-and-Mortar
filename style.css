@@ -448,6 +448,12 @@ img {
   text-transform: uppercase;
  }
 
+ input[type="button"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+ }
+
+
 @media only screen and (max-width: 500px) {
 
   .gallerySection img {

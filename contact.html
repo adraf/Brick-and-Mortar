@@ -65,11 +65,6 @@
       <div id="contactPageInfo">
         <h1>Contact Us</h1>
         <a href="tel:07732344154"><p>Phone</p><p>07732344154</p></a>
-        <!-- general email link -->
-        <!-- <a href="mailto:brickandmortarexeter@gmail.com?subject=Website%20Enquiry"><p>Email</p><p>brickandmortarexeter@gmail.com</p></a> -->
-        <!-- confirm box link -->
-        <!-- <a onclick="emailCheck()"><p>Email</p><p>brickandmortarexeter@gmail.com</p></a>     -->
-        <!-- personalised confirm box link -->
         <a onclick="showConfirmBox()"><p>Email</p><p>brickandmortarexeter@gmail.com</p></a>
         <a href="https://g.page/brick-and-mortar-exeter?share"><p>Find Us</p>
         <p>First Floor<br>55 Bartholomew Street West<br>Exeter<br>EX4 3AJ</p></a>
@@ -80,24 +75,6 @@
     
   </main>
   <script src="main.js"></script>
-  <script>
-    function showConfirmBox() {
-      document.getElementById("overlay").hidden = false;
-    }
-    function closeConfirmBox() {
-      document.getElementById("overlay").hidden = true;
-    }
-    
-    function isConfirm(answer) {
-      if (answer) {
-      // answer true
-        window.open('mailto:brickandmortarexeter@gmail.com?subject=Website%20Enquiry', '_blank');
-      } else {
-      // answer false
-        window.open('https://brickmortar.resurva.com/book', '_blank');
-      }
-      closeConfirmBox();
-    }
-  </script>
+  <script src="confirmbox.js"></script>
 </body>
 </html>

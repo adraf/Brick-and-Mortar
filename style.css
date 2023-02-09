@@ -252,13 +252,20 @@ body {
   letter-spacing: 3px;
 }
 
-.barberSections p {
+/* .barberSections p {
   font-size: 0.9rem;
   font-weight: 300;
   text-transform: none;
   letter-spacing: normal;
   margin-bottom: 30px;
   max-width: 600px;
+} */
+
+.teamTitle {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  margin: 1em 0 1.25em 0;
 }
 
 #priceInfo .info {
@@ -275,6 +282,14 @@ body {
   font-weight: 300;
   letter-spacing: 3px;
   max-width: 600px;
+}
+
+#contactUsBtn {
+  margin-top: 20px;
+}
+
+.barberSections {
+  margin-bottom: 30px;
 }
 
 .barberSections img {
@@ -374,10 +389,6 @@ a:hover {
   background-color: rgb(62, 62, 62, 0.8);
 }
 
-img {
-  margin-bottom: -5px;
-}
-
 
 /* Confirm box */
 
@@ -458,6 +469,20 @@ button:hover {
  b {
   text-transform: uppercase;
  }
+
+ /* .madeBy {
+  font-size: 0.60rem;
+  font-weight: 300;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 40px 0 -40px 0;
+ }
+
+ .madeBy a {
+  text-decoration: none;
+  color: inherit;
+ } */
 
 @media only screen and (max-width: 500px) {
 

@@ -26,31 +26,3 @@ menuLinks.forEach(
     menuLink.addEventListener("click", toggleHamburger) 
   }
 )
-
-// js confirm box for customer's emailing.
-// function emailCheck() {
-//   if (confirm("If you would like to email us with any questions, please continue by clicking OK.\n\nIf you are looking to request a booking please select Cancel and use the Resurva boking form.\n\nThanks")) {
-//     window.open('mailto:brickandmortarexeter@gmail.com?subject=Website%20Enquiry', '_blank');
-//   } else {
-//     window.open('https://brickmortar.resurva.com/book', '_blank');
-//   }
-// }
-
-// personalised confirm box for email
-function showConfirmBox() {
-  document.getElementById("overlay").hidden = false;
-}
-function closeConfirmBox() {
-  document.getElementById("overlay").hidden = true;
-}
-
-function isConfirm(answer) {
-  if (answer) {
-  // answer true
-    window.open('mailto:brickandmortarexeter@gmail.com?subject=Website%20Enquiry', '_blank');
-  } else {
-  // answer false
-    window.open('https://brickmortar.resurva.com/book', '_blank');
-  }
-  closeConfirmBox();
-}
